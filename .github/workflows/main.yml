@@ -23,4 +23,4 @@ jobs:
 
       - name: Upload
         run: |
-          aws s3 cp ./index.html s3://${{ secrets.BUCKET_NAME_EXTERNAL }}
+          aws s3 cp ./index.html s3://${{ secrets.BUCKET_NAME_EXTERNAL }}/
