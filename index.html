@@ -16,7 +16,83 @@
 
 <b>Pause</b>
 <br>
-<a href="pages/nitrogen.html" title="Nitrogen Dioxide">NO<sub>2</sub></a>
+
+<!--<a href="pages/nitrogen.html" title="Nitrogen Dioxide">NO<sub>2</sub></a>-->
+
+Within Amazon Web Services (AWS), a container instance of the repository is run via a
+**task state** of an AWS Step Functions **state machine**.  The container is an instance of this repository.  In brief:
+
+* A GitHub Actions event **(a)** builds an image of this repository, and **(b)** delivers the image to an Amazon
+Elastic Container Registry repository.  This occurs automatically on-push to GitHub.
+
+* Next, at runtime the state machine pulls the image from the registry and creates a runtime container.  The container
+reads the raw data, structures it, and delivers the structured data to a specified Amazon S3 (Simple Storage Service) bucket.
+
+* Depending on events, a success or failure notification is raised.  Afterwards, all activated services are terminated.
+
+<br>
+<br>
+
+## Steps
+
+Steps in focus:
+
+<table style="width: 80%; border: 0; border-spacing: 5px; margin-left: 35px">
+    <colgroup>
+        <col span="1" style="width: 23.5%;">
+        <col span="1" style="width: 66.5%;">
+    </colgroup>
+    <thead><tr style="text-align: left"><th>focus</th><th>notes</th></tr></thead>
+    <tr><td>Images & Containers</td>
+        <td><ul style="list-style-type:'\2713';">
+            <li>&nbsp; The Dockerfile for development.</li>
+            <li>&nbsp; The Dockerfile for production.</li>
+            <li>&nbsp; A compose.yaml for local testing.</li>
+        </ul></td>
+    </tr>
+    <tr><td>Container Registries</td>
+        <td><ul style="list-style-type:'\2713';">
+            <li>&nbsp; Local Machine &rarr; GitHub &rarr; Amazon Elastic Container Registry (<a href="/.github/workflows/main.yml" target="_blank">Via GitHub Actions</a>)</li>
+            <li>&nbsp; Local Machine &rarr; GitHub &rarr; GitHub Container Registry (<a href="/.github/workflows/main.yml" target="_blank">Via GitHub Actions</a>)</li>
+        </ul></td>
+    </tr>
+    <tr><td>Cataloguing</td>
+        <td>&#10003; &nbsp; Cataloguing Amazon S3 (Simple Storage Service) deliveries via Amazon Glue (Via the Glue Package)</td>
+    </tr>
+    <tr><td>Code Analysis</td>
+        <td>&#10003; &nbsp; Code Analysis (<a href="/.github/workflows/main.yml" target="_blank">Via GitHub Actions</a>)</td>
+    </tr>
+    <tr><td>Usage Notes</td>
+        <td><ul  style="list-style-type:'\2717';">
+            <li>&nbsp; Explanatory usage notes</li>
+            <li>&nbsp; Resources files</li>
+        </ul></td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+<br>
+<br>
+
+## Appendix
+
+<b>State Machine</b>
+
+```mermaid
+stateDiagram-v2
+id1: pollutants
+id2: Notify Success
+id3: Notify Failure
+[*] --> id1
+id1 --> id2
+id1 --> id3: catch
+id2 --> [*]
+id3 --> [*]
+```
+
+The task state *pollutants* runs a container that reads historical pollutants data from Scottish Air Quality's data hub.
 
 
 </body>
