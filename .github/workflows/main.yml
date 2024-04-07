@@ -27,5 +27,5 @@ jobs:
           cd ../..
           pwd
           ls
-          aws s3 cp ~/graphs/pages/nitrogen.html s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/ --recursive
-          aws s3 cp ~/graphs/assets s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/ --recursive
+          aws s3 cp ~/work/graphs/pages/nitrogen.html s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/ --recursive
+          aws s3 cp ~/work/graphs/assets s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/ --recursive
