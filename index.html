@@ -22,21 +22,25 @@
 
     <div class="grid-item">
         <header>
-            <h2>About</h2>
-            <div class="tagline-container"><p>Proof of Concepts</p></div>
+            <h2>Concepts</h2>
+            <div class="tagline-container">
+                <p>About</p>
+                <p>Graph</p>
+            </div>
         </header>
     </div>
     <div class="introduction">
+        <br>
         This concept depends on hourly nitrogen dioxide readings, read by telemetric devices across Edinburgh.  The
         data is for a forecasting project.  These pages focus on orchestration via Amazon Web Services,
-        specifically <i>… the daily automatic reading, structuring, daily quantiles & extrema calculations,
+        specifically <i>… the daily automatic reading, structuring, quantiles & extrema calculations,
         and graphing of nitrogen dioxide measures</i>.
     </div>
     <div class="grid-item"></div>
 
     <div class="grid-item"></div>
     <div class="grid-item">
-        <h1>Set Up</h1>
+        <h2>Set Up</h2>
         <iframe style="overflow:hidden; width:100%; height:330px; border:none; margin-left:65px"
                 src="assets/images/setup.html"></iframe>
         <figure>
@@ -49,21 +53,34 @@
             </figcaption>
         </figure>
 
-        All computations are via containers.  The settings include automatic
+
+    </div>
+    <div class="grid-item"></div>
+
+
+    <div class="grid-item"></div>
+    <div class="grid-item">
+        <h2>Project Hub</h2>
+
+        The GitHub Organization <a href="https://github.com/enqueter">enquêter</a> hosts all the repositories of this
+        project.  In line with the <b>agnostic solutions</b> request, all computations are via containers.  Container
+        image registration is automatic, it occurs during pushes to GitHub, i.e., it is part of this project's continuous
+        integration, delivery, & deployment set-up.  The registries are
 
         <ul style="list-style-type:'\2713';">
             <li>&nbsp; Amazon Elastic Container Registry (<a href="/.github/workflows/main.yml" target="_blank">Via GitHub Actions</a>)</li>
             <li>&nbsp; GitHub Container Registry (<a href="/.github/workflows/main.yml" target="_blank">Via GitHub Actions</a>)</li>
         </ul>
 
-        image registration.
+        
     </div>
     <div class="grid-item"></div>
+
 
     <div class="grid-item"></div>
     <div class="grid-item">
 
-        <h1>State Machine</h1>
+        <h2>State Machine</h2>
         Within Amazon Web Services (AWS), a container instance of the repository is run via a
         **task state** of an AWS Step Functions **state machine**.  The container is an instance of this repository.
 
