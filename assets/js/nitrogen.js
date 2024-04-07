@@ -40,7 +40,7 @@ function generateChart(fileNameKey) {
 
     // https://raw.githubusercontent.com/membranes/graphs/develop/sample/nitrogen/pollutant_8_station_
 
-    $.getJSON('../sample/nitrogen/pollutant_8_station_' + fileNameKey + '.json', function (source) {
+    $.getJSON('../pollutants/quantiles/pollutant_8_station_' + fileNameKey + '.json', function (source) {
 
         // https://api.highcharts.com/highstock/plotOptions.series.dataLabels
         // https://api.highcharts.com/class-reference/Highcharts.Point#.name
