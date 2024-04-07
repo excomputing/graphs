@@ -72,7 +72,19 @@
             <li>&nbsp; GitHub Container Registry (<a href="/.github/workflows/main.yml" target="_blank">Via GitHub Actions</a>)</li>
         </ul>
 
-        
+        The repositories have an execution order, which informs the design of end-to-end automated solutions via State
+        Machines.  The acquisition, or re-acquisition, baseline/historical data is via the <a
+            href="https://github.com/enqueter/pollutants" target="_blank">pollutants repository</a>.
+
+        <pre class="mermaid">
+        flowchart LR
+        id8([start]) --> id9(<span title="historical nitrogen readings">pollutants</span>)
+        id9 --> id10([END])
+
+        classDef default fill:#333333,stroke:#333333,stroke-width:0px,color:#ffffff,font-size:10pt;
+        </pre>
+
+
     </div>
     <div class="grid-item"></div>
 
