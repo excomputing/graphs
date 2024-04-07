@@ -25,6 +25,6 @@ jobs:
         run: |
           aws s3 cp ./index.html s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/
           cd ..
-          echo $pwd
+          pwd
           aws s3 cp pages/nitrogen.html s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/ --recursive
           aws s3 cp assets s3://${{ secrets.AWS_BUCKET_EXTERNAL }}/ --recursive
