@@ -1,6 +1,6 @@
 <br>
 
-**graphs**
+**Graphs**
 
 * [Google Fonts](https://developers.google.com/fonts/docs/getting_started)
 * [Google Libraries for Developers](https://developers.google.com/speed/libraries)
