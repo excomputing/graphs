@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='assets/css/generic.css'>
+
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Vollkorn'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Tangerine'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+
+    <title>index</title>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+
+    <div class="grid-item">
+        <header>
+            <h2>Notes</h2>
+            <div class="tagline-container">
+                <p><a href="index.html">About</a></p>
+                <p><a href="pages/nitrogen.html">Graph</a></p>
+            </div>
+        </header>
+    </div>
+    <div class="introduction">
+        <br>
+        This concept depends on hourly nitrogen dioxide readings, read by telemetric devices across Edinburgh.  The
+        data is for a forecasting project.  These pages focus on orchestration via Amazon Web Services,
+        specifically <i>… the daily automatic reading, structuring, quantiles & extrema calculations,
+        and graphing of nitrogen dioxide measures</i>.
+    </div>
+    <div class="grid-item"></div>
+
+    <div class="grid-item"></div>
+    <div class="grid-item">
+        <h2>Set Up</h2>
+        <iframe style="overflow:hidden; width:100%; height:380px; border:none; margin-left:65px"
+                src="assets/images/setup.html"></iframe>
+        <figure>
+            <figcaption>For more details hover over the icons; a few icons have links to more details.  Assets, e.g.,
+                container images, are delivered to Amazon Web Services (AWS) via GitHub. [<a
+                        href="https://github.com/enqueter/pollutants/actions/runs/8443640990/job/23127661393" target="_blank">CodeQL</a> Example, <a
+                        href="https://github.com/enqueter/pollutants/actions/runs/8443640949" target="_blank">Actions</a>/<a
+                        href="https://github.com/enqueter/pollutants/actions/runs/8443640949/workflow" target="_blank">Actions Code</a>
+                Example]
+            </figcaption>
+        </figure>
+
+
+    </div>
+    <div class="grid-item"></div>
+
+
+    <div class="grid-item"></div>
+    <div class="grid-item">
+        <h2>Project Hub</h2>
+
+        The GitHub Organization <a href="https://github.com/enqueter">enquêter</a> hosts all the repositories of this project.  In line with the <b>agnostic solutions</b> request, all computations are via containers.  Container
+        image registration is automatic, it occurs during pushes to GitHub, i.e., it is part of this project's continuous
+        integration, delivery, & deployment set-up; the registries are <a
+            href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html" target="_blank">Amazon Elastic Container
+        Registry</a> &
+        <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#about-the-container-registry" target="_blank">GitHub Container Registry</a>.
+
+        <br><br>
+
+        The repositories have an execution order, which informs the design of end-to-end automated solutions via <b>state
+        machines</b>.  For example, the acquisition, or re-acquisition, baseline/historical data is via the <a
+            href="https://github.com/enqueter/pollutants" target="_blank">pollutants repository</a>.
+
+        <pre class="mermaid">
+        flowchart LR
+        id8([start]) --> id9(<span title="historical nitrogen readings">pollutants</span>)
+        id9 --> id10([END])
+
+        classDef default fill:#333333,stroke:#333333,stroke-width:0px,color:#ffffff,font-size:10pt;
+        </pre>
+
+        <br>
+
+        The acquisition of the latest daily measures is via the <a>daily repository</a>, whilst the calculation of
+        quantiles & extrema is via the <a>distributions repository</a>.
+
+        <pre class="mermaid">
+        flowchart LR
+        id0([start]) --> id1(<span title="get yesterday's nitrogen readings">daily</span>)
+        id1 --> id2(<span title="recalculate the daily quantiles across time">distributions</span>)
+        id2 --> id3([END])
+
+        classDef default fill:#333333,stroke:#333333,stroke-width:0px,color:#ffffff,font-size:10pt;
+        </pre>
+
+
+    </div>
+    <div class="grid-item"></div>
+
+    <div class="grid-item"></div>
+    <div class="grid-item">
+        <h2>State Machines</h2>
+        Within Amazon Web Services (AWS), a container instance of a repository is run via a <b>task state</b> of an
+        AWS Step Functions <b>state machine</b>.  AWS Step Functions is a <i>``serverless orchestration service''</i>, via
+        which end-to-end automated solutions, on-demand machine learning model training, etc., can be deployed.
+    </div>
+    <div class="grid-item"></div>
+
+    <div class="grid-item"></div>
+    <div class="grid-item">
+
+        <h3>Historical</h3>
+        The task state <b>pollutants</b> runs a container that reads historical pollutants data from Scottish
+        Air Quality's data hub.
+        <pre class="mermaid">
+            stateDiagram-v2
+            id1: pollutants
+            id2: Notify Success
+            id3: Notify Failure
+            [*] --> id1
+            id1 --> id2
+            id1 --> id3: catch
+            id2 --> [*]
+            id3 --> [*]
+        </pre>
+        In brief:
+        <ul>
+            <li>A GitHub Actions event <b>(a)</b> builds an image of the pollutants repository, and <b>(b)</b> delivers the
+                image to an Amazon Elastic Container Registry repository.  This occurs automatically on-push to GitHub.</li>
+            <li>Next, at runtime the state machine pulls the image from the registry and creates a runtime container.  The container
+                reads the raw data, structures it, and delivers the structured data to a specified Amazon S3 (Simple Storage Service) bucket.</li>
+            <li>Depending on events, a success or failure notification is raised.  Afterwards, all activated services are terminated.</li>
+        </ul>
+        The <b>pollutants</b> container will erase everything in place, then reset cloud resources and re-acquire
+        historical data.
+
+    </div>
+    <div class="grid-item"></div>
+
+    <div class="grid-item"></div>
+    <div class="grid-item">
+        <h3>Daily</h3>
+        <figure>
+            <img  style="width:65%" src="assets/images/step-functions.png" alt="Step Functions" />
+            <figcaption>Deploying an end-to-end solution via <a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html" target="_blank">step functions</a>, an orchestration service. The underlying infrastructure code outlines (a)
+                executions via Amazon's Elastic Container Service [Fargate], (b) virtual private cloud settings per case, alongside
+                securty group and subnet settings, (c) notification settings, (d) time-boxing/auto-termination, (e) and much more.
+            </figcaption>
+        </figure>
+    </div>
+    <div class="grid-item"></div>
+
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+</div>
+
+
+</body>
+</html>
