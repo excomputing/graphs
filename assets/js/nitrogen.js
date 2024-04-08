@@ -129,8 +129,8 @@ function generateChart(fileNameKey) {
             },
 
             subtitle: {
-                text: '<p>Details</p> <br/> ' +
-                    '<p><b>Upcoming</b></p>'
+                text: '<p>Nitrogen Dioxide</p> <br/> ' +
+                    '<p><b>µg/m<sup>3</sup></b></p>'
             },
 
             time: {
@@ -174,7 +174,7 @@ function generateChart(fileNameKey) {
                     x: 9
                 },
                 title: {
-                    text: optionSelected,
+                    text: 'NO<sub>2</sub> (µg/m<sup>3</sup>)',
                     x: 0
                 },
                 min: 0,
@@ -222,7 +222,7 @@ function generateChart(fileNameKey) {
 
             series: [{
                 type: 'candlestick',
-                name: 'Distribution of ' + optionSelected,
+                name: 'Distributions of ' + optionSelected,
                 data: ohlc,
                 dataGrouping: {
                     units: groupingUnits,
@@ -239,10 +239,10 @@ function generateChart(fileNameKey) {
                 },
                 tooltip: {
                     pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b><br/>' +
-                        'Upper Whisker: {point.high:,.2f}<br/>' +
-                        'Upper Quartile: {point.close:,.2f}<br/>' +
-                        'Lower Quartile: {point.open:,.2f}<br/>' +
-                        'Lower Whisker: {point.low:,.2f}' + '<br/>'
+                        'Upper Whisker: {point.high:,.2f} µg/m3<br/>' +
+                        'Upper Quartile: {point.close:,.2f} µg/m3<br/>' +
+                        'Lower Quartile: {point.open:,.2f} µg/m3<br/>' +
+                        'Lower Whisker: {point.low:,.2f} µg/m3' + '<br/>'
                 }
             },
                 {
@@ -256,7 +256,7 @@ function generateChart(fileNameKey) {
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b>: ' +
-                            '{point.y:,.2f}<br/>'
+                            '{point.y:,.2f} µg/m3<br/>'
                     }
                 },
                 {
@@ -271,7 +271,7 @@ function generateChart(fileNameKey) {
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b>: ' +
-                            '{point.y}<br/>'
+                            '{point.y:,.2f} µg/m3<br/>'
                     }
                 },
                 {
@@ -285,7 +285,7 @@ function generateChart(fileNameKey) {
                     },
                     tooltip: {
                         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b> {series.name} </b>: ' +
-                            '{point.y}<br/>'
+                            '{point.y:,.2f} µg/m3<br/>'
                     }
 
                 }
