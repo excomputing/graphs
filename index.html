@@ -71,8 +71,8 @@
 
         <br><br>
 
-        The repositories have an execution order, which informs the design of end-to-end automated solutions via state
-        machines.  For example, the acquisition, or re-acquisition, baseline/historical data is via the <a
+        The repositories have an execution order, which informs the design of end-to-end automated solutions via <b>state
+        machines</b>.  For example, the acquisition, or re-acquisition, baseline/historical data is via the <a
             href="https://github.com/enqueter/pollutants" target="_blank">pollutants repository</a>.
 
         <pre class="mermaid">
@@ -103,16 +103,17 @@
 
     <div class="grid-item"></div>
     <div class="grid-item">
-        <h2>State Machine</h2>
+        <h2>State Machines</h2>
         Within Amazon Web Services (AWS), a container instance of a repository is run via a <b>task state</b> of an
-        AWS Step Functions <b>state machine</b>.
+        AWS Step Functions <b>state machine</b>.  AWS Step Functions is a <i>``serverless orchestration service''</i>, via
+        which end-to-end automated solutions, on-demand machine learning model training, etc., can be deployed.
     </div>
     <div class="grid-item"></div>
 
     <div class="grid-item"></div>
     <div class="grid-item">
 
-        <h3>The Beginning</h3>
+        <h3>Historical</h3>
         The task state <b>pollutants</b> runs a container that reads historical pollutants data from Scottish
         Air Quality's data hub.
         <pre class="mermaid">
@@ -134,6 +135,8 @@
                 reads the raw data, structures it, and delivers the structured data to a specified Amazon S3 (Simple Storage Service) bucket.</li>
             <li>Depending on events, a success or failure notification is raised.  Afterwards, all activated services are terminated.</li>
         </ul>
+        The <b>pollutants</b> container will erase everything in place, then reset cloud resources and re-acquire
+        historical data.
 
     </div>
     <div class="grid-item"></div>
