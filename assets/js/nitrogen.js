@@ -154,7 +154,7 @@ function generateChart(fileNameKey) {
 
             caption: {
                 // verticalAlign: "top",
-                text: '<p>Herein, each candlestick illustrates the spread of nitrogen measures ' +
+                text: '<p>Each candlestick illustrates the spread of nitrogen measures ' +
                     'across 24 hours.</p>'
             },
 
