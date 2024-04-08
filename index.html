@@ -84,6 +84,18 @@
         classDef default fill:#333333,stroke:#333333,stroke-width:0px,color:#ffffff,font-size:10pt;
         </pre>
 
+        The acquisition of the latest daily measures is via the <a>daily repository</a>, whilst the calculation of
+        quantiles & extrema is via the <a>distributions repository</a>.
+
+        <pre class="mermaid">
+        flowchart LR
+        id0([start]) --> id1(<span title="get yesterday's nitrogen readings">daily</span>)
+        id1 --> id2(<span title="recalculate the daily quantiles across time">distributions</span>)
+        id2 --> id3([END])
+
+        classDef default fill:#333333,stroke:#333333,stroke-width:0px,color:#ffffff,font-size:10pt;
+        </pre>
+
 
     </div>
     <div class="grid-item"></div>
@@ -94,10 +106,7 @@
 
         <h2>State Machine</h2>
         Within Amazon Web Services (AWS), a container instance of the repository is run via a
-        **task state** of an AWS Step Functions **state machine**.  The container is an instance of this repository.
-
-
-        <b>State Machine</b>
+        <b>task state</b> of an AWS Step Functions <b>state machine</b>.  The container is an instance of this repository.
 
         <pre class="mermaid">
             stateDiagram-v2
@@ -112,14 +121,14 @@
         </pre>
 
 
-        The task state *pollutants* runs a container that reads historical pollutants data from Scottish Air Quality's data hub.
+        The task state <b>pollutants</b> runs a container that reads historical pollutants data from Scottish Air Quality's
+        data hub.
 
         In brief:
 
         <ul>
-            <li>A GitHub Actions event **(a)** builds an image of the pollutants repository, and **(b)** delivers the
-                image to an Amazon
-                Elastic Container Registry repository.  This occurs automatically on-push to GitHub.</li>
+            <li>A GitHub Actions event <b>(a)</b> builds an image of the pollutants repository, and <b>(b)</b> delivers the
+                image to an Amazon Elastic Container Registry repository.  This occurs automatically on-push to GitHub.</li>
             <li>Next, at runtime the state machine pulls the image from the registry and creates a runtime container.  The container
                 reads the raw data, structures it, and delivers the structured data to a specified Amazon S3 (Simple Storage Service) bucket.</li>
             <li>Depending on events, a success or failure notification is raised.  Afterwards, all activated services are terminated.</li>
@@ -130,7 +139,7 @@
 
     <div class="grid-item"></div>
     <div class="grid-item">
-        Execution Orders
+        
 
     </div>
     <div class="grid-item"></div>
