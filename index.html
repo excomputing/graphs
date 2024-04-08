@@ -100,14 +100,20 @@
     </div>
     <div class="grid-item"></div>
 
+    <div class="grid-item"></div>
+    <div class="grid-item">
+        <h2>State Machine</h2>
+        Within Amazon Web Services (AWS), a container instance of a repository is run via a <b>task state</b> of an
+        AWS Step Functions <b>state machine</b>.
+    </div>
+    <div class="grid-item"></div>
 
     <div class="grid-item"></div>
     <div class="grid-item">
 
-        <h2>State Machine</h2>
-        Within Amazon Web Services (AWS), a container instance of the repository is run via a
-        <b>task state</b> of an AWS Step Functions <b>state machine</b>.  The container is an instance of this repository.
-
+        <h3>The Beginning</h3>
+        The task state <b>pollutants</b> runs a container that reads historical pollutants data from Scottish
+        Air Quality's data hub.
         <pre class="mermaid">
             stateDiagram-v2
             id1: pollutants
@@ -119,13 +125,7 @@
             id2 --> [*]
             id3 --> [*]
         </pre>
-
-
-        The task state <b>pollutants</b> runs a container that reads historical pollutants data from Scottish Air Quality's
-        data hub.
-
         In brief:
-
         <ul>
             <li>A GitHub Actions event <b>(a)</b> builds an image of the pollutants repository, and <b>(b)</b> delivers the
                 image to an Amazon Elastic Container Registry repository.  This occurs automatically on-push to GitHub.</li>
@@ -139,8 +139,14 @@
 
     <div class="grid-item"></div>
     <div class="grid-item">
-        
-
+        <h3>Daily</h3>
+        <figure>
+            <img  style="width:65%" src="assets/images/step-functions.png" />
+            <figcaption>Deploying an end-to-end solution via <a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html" target="_blank">step functions</a>, an orchestration service. The underlying infrastructure code outlines (a)
+                executions via Amazon's Elastic Container Service [Fargate], (b) virtual private cloud settings per case, alongside
+                securty group and subnet settings, (c) notification settings, (d) time-boxing/auto-termination, (e) and much more.
+            </figcaption>
+        </figure>
     </div>
     <div class="grid-item"></div>
 
