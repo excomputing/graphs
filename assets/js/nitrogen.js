@@ -1,7 +1,6 @@
 var Highcharts;
 var optionSelected;
 var dropdown = $('#option_selector');
-// var url = 'https://raw.githubusercontent.com/membranes/graphs/develop/assets/menu/nitrogen.json';
 var url = '../assets/menu/nitrogen.json';
 
 
@@ -38,8 +37,7 @@ dropdown.on('change', function (e) {
 // Generate graphs
 function generateChart(fileNameKey) {
 
-    // https://raw.githubusercontent.com/membranes/graphs/develop/sample/nitrogen/pollutant_8_station_
-
+    // Relative to Amazon S3 (Simple Storage Service) Set Up
     $.getJSON('../pollutants/quantiles/pollutant_8_station_' + fileNameKey + '.json', function (source) {
 
         // https://api.highcharts.com/highstock/plotOptions.series.dataLabels

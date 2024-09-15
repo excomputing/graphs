@@ -53,19 +53,17 @@
         </ul>
 
         This concept illustrates Amazon Web Services tools via hourly nitrogen dioxide readings, read by
-        telemetric devices across Edinburgh; the data is for a data science team forecasting project.  The illustration
-        is via two solutions
+        telemetric devices across Edinburgh.  The illustration is via two solutions
 
         <ol>
-            <li>A one-off solution that sets up a data depository within Amazon, and subsequently delivers historical
+            <li>A <a href="https://github.com/excomputing/pollutants" target="_blank">one-off solution</a> that sets up a data depository within Amazon, and subsequently delivers historical
                 Scottish Air Quality nitrogen dioxide data to the depository; after cleaning and structuring. </li>
             <li>A solution designed to operate daily.  Each day it automatically reads and structures the latest nitrogen
                 readings, conducts quantiles and extrema calculations, and delivers the calculations to a point
-                where a graph's data interface automatically reads it.</li>
+                where a graph's data interface automatically reads it. daily &rarr; distributions &rarr; graph</li>
         </ol>
 
-        Instead of a graph, it could be a mobile app, an alert system, any data interface.  Explore the links within this
-        page, e.g., the <a href="https://github.com/enqueter/distributions/actions/runs/8585075885">actions</a> pages.
+        Instead of a graph, it could be a mobile app, an alert system, any data interface.
 
 
     </div>
@@ -79,9 +77,9 @@
         <figure>
             <figcaption>For more details hover over the icons; a few icons have links to more details.  Assets, e.g.,
                 container images, are delivered to Amazon Web Services (AWS) via GitHub. [<a
-                        href="https://github.com/enqueter/pollutants/actions/runs/8443640990/job/23127661393" target="_blank">CodeQL</a> Example, <a
-                        href="https://github.com/enqueter/pollutants/actions/runs/8443640949" target="_blank">Actions</a>/<a
-                        href="https://github.com/enqueter/pollutants/actions/runs/8443640949/workflow" target="_blank">Actions Code</a>
+                        href="https://github.com/excomputing/pollutants/actions/runs/8443640990/job/23127661393" target="_blank">CodeQL</a> Example, <a
+                        href="https://github.com/excomputing/pollutants/actions/runs/8443640949" target="_blank">Actions</a>/<a
+                        href="https://github.com/excomputing/pollutants/actions/runs/8443640949/workflow" target="_blank">Actions Code</a>
                 Example]
             </figcaption>
         </figure>
@@ -95,7 +93,7 @@
     <div class="grid-item">
         <h2>Project Hub</h2>
 
-        The GitHub Organization <a href="https://github.com/enqueter">enquêter</a> hosts all the repositories of this project.  In line with the <b>agnostic solutions</b> request, all computations are via containers.  Container
+        The GitHub Organization <a href="https://github.com/excomputing"><i>excomputing</i></a> hosts all the repositories of this project.  In line with the <b>agnostic solutions</b> request, all computations are via containers.  Container
         image registration is automatic, it occurs during pushes to GitHub, i.e., it is part of this project's continuous
         integration, delivery, & deployment set-up; the registries are <a
             href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html" target="_blank">Amazon Elastic Container
@@ -106,7 +104,7 @@
 
         The repositories have an execution order, which informs the design of end-to-end automated solutions via <b>state
         machines</b>.  For example, the acquisition, or re-acquisition, baseline/historical data is via the <a
-            href="https://github.com/enqueter/pollutants" target="_blank">pollutants repository</a>.
+            href="https://github.com/excomputing/pollutants" target="_blank">pollutants repository</a>.
 
         <pre class="mermaid">
         flowchart LR
