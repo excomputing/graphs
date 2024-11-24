@@ -40,10 +40,3 @@
 .tooltiptext {
   font-size: 11px;
 }
-
-div.mxTooltip {
-    border-width: 0;
-    background: #FFFFFF;
-    font-family: "Vollkorn", serif, "Baskerville Old Face";
-    font-size: 10px;
-}
