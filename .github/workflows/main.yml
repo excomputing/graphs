@@ -5,6 +5,7 @@ on: [push]
 jobs:
   deliver:
     name: Amazon S3
+    if: github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
 
     permissions:
