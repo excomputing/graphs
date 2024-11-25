@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" modified="2024-11-25T21:50:29.042Z" etag="bRpZcRWrMEnMQ_jEtXmY" version="22.1.2" type="device">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" modified="2024-11-25T21:54:06.298Z" etag="GLq-7YN4GlGRVI2hQtMy" version="22.1.2" type="device">
   <diagram id="3fyaTf5KyxF5UBYYpUpR" name="sketches">
     <mxGraphModel dx="1017" dy="708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -232,7 +232,7 @@
         <mxCell id="0hqDCtrjmVxyAoHmFhwl-2" value="Amazon (Pricing Links)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;fontSize=13;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="1145" y="522" width="202" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="0hqDCtrjmVxyAoHmFhwl-3" value="Most of the diagram&#39;s objects have tooltips, and sometimes links; hover." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=0;fontStyle=1;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;fontSize=13;" vertex="1" parent="1">
+        <mxCell id="0hqDCtrjmVxyAoHmFhwl-3" value="Most of the diagram&#39;s objects have tooltips, and sometimes links; zoom-in and hover." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=0;fontStyle=1;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;fontSize=13;" vertex="1" parent="1">
           <mxGeometry x="50" y="50" width="175" height="50" as="geometry" />
         </mxCell>
       </root>
