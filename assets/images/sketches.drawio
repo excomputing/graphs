@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" modified="2024-11-25T01:25:37.012Z" etag="QEjrOtxy3wyZhfvWSsvg" version="22.1.2" type="device" pages="2">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" modified="2024-11-25T01:37:04.042Z" etag="HsmCqhqy8OBIMyuHFz_k" version="22.1.2" type="device" pages="2">
   <diagram name="excomputing" id="bRcskWf2ZqPo3RzROSnh">
     <mxGraphModel dx="1434" dy="1004" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -260,7 +260,7 @@
         <mxCell id="eS7tUnVbYrJb8bfeCUeB-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="eS7tUnVbYrJb8bfeCUeB-3" target="eS7tUnVbYrJb8bfeCUeB-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <UserObject label="" tooltip="Amazon CloudFront: &lt;a href=&quot;https://aws.amazon.com/cloudfront/pricing/?nc=sn&amp;loc=3#&quot; target=&quot;_blank&quot;&gt;PRICING&lt;/a&gt;" id="eS7tUnVbYrJb8bfeCUeB-3">
+        <UserObject label="" tooltip="Amazon CloudFront" link="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html" linkTarget="_blank" id="eS7tUnVbYrJb8bfeCUeB-3">
           <mxCell style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudfront;opacity=80;rotation=0;" vertex="1" parent="1">
             <mxGeometry x="1239" y="212.85" width="43.5" height="43.5" as="geometry" />
           </mxCell>
@@ -268,9 +268,11 @@
         <mxCell id="eS7tUnVbYrJb8bfeCUeB-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classicThin;endFill=1;startArrow=classicThin;startFill=1;" edge="1" parent="1" source="eS7tUnVbYrJb8bfeCUeB-5" target="eS7tUnVbYrJb8bfeCUeB-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="eS7tUnVbYrJb8bfeCUeB-5" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#1A1A1A;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam2.aws_s3;" vertex="1" parent="1">
-          <mxGeometry x="1128" y="217.85000000000002" width="34" height="34" as="geometry" />
-        </mxCell>
+        <UserObject label="" link="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html" tooltip="Amazon S3 (Simple Storage Service)" id="eS7tUnVbYrJb8bfeCUeB-5">
+          <mxCell style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#1A1A1A;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam2.aws_s3;" vertex="1" parent="1">
+            <mxGeometry x="1128" y="217.85000000000002" width="34" height="34" as="geometry" />
+          </mxCell>
+        </UserObject>
         <mxCell id="eS7tUnVbYrJb8bfeCUeB-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="eS7tUnVbYrJb8bfeCUeB-7" target="eS7tUnVbYrJb8bfeCUeB-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -292,7 +294,7 @@
         <mxCell id="eS7tUnVbYrJb8bfeCUeB-8" value=".cloudfront.net" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.edge_location;opacity=80;rotation=0;" vertex="1" parent="1">
           <mxGeometry x="1353" y="212.85" width="43.5" height="43.5" as="geometry" />
         </mxCell>
-        <UserObject label="" tooltip="Web Application Firewall" id="eS7tUnVbYrJb8bfeCUeB-9">
+        <UserObject label="" tooltip="Web Application Firewall" link="https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html" id="eS7tUnVbYrJb8bfeCUeB-9">
           <mxCell style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.waf;rotation=0;opacity=80;" vertex="1" parent="1">
             <mxGeometry x="1269" y="261.1" width="25" height="25" as="geometry" />
           </mxCell>
