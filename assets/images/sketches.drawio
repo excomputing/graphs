@@ -1,6 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" modified="2024-11-25T21:15:42.763Z" etag="gqgmNzU6H2uBqhwq687J" version="22.1.2" type="device">
-  <diagram id="3fyaTf5KyxF5UBYYpUpR" name="schema">
-    <mxGraphModel dx="1356" dy="944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" modified="2024-11-25T21:50:29.042Z" etag="bRpZcRWrMEnMQ_jEtXmY" version="22.1.2" type="device">
+  <diagram id="3fyaTf5KyxF5UBYYpUpR" name="sketches">
+    <mxGraphModel dx="1017" dy="708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,9 +13,11 @@
         <mxCell id="xd8cn43aCEoKMopoF1mM-1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=strokeColor;rotation=0;" parent="1" vertex="1">
           <mxGeometry x="370" y="50" width="2" height="690" as="geometry" />
         </mxCell>
-        <mxCell id="EyldbqkST-IWhBG-3otC-2" value="" style="points=[[0.13,0.02,0],[0.5,0,0],[0.87,0.02,0],[0.885,0.4,0],[0.985,0.985,0],[0.5,1,0],[0.015,0.985,0],[0.115,0.4,0]];verticalLabelPosition=bottom;sketch=0;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.secure_endpoints;fillColor=#1A1A1A;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="50" y="377.5" width="50" height="35" as="geometry" />
-        </mxCell>
+        <UserObject label="" tooltip="Local work station." id="EyldbqkST-IWhBG-3otC-2">
+          <mxCell style="points=[[0.13,0.02,0],[0.5,0,0],[0.87,0.02,0],[0.885,0.4,0],[0.985,0.985,0],[0.5,1,0],[0.015,0.985,0],[0.115,0.4,0]];verticalLabelPosition=bottom;sketch=0;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.secure_endpoints;fillColor=#1A1A1A;strokeColor=none;" parent="1" vertex="1">
+            <mxGeometry x="50" y="377.5" width="50" height="35" as="geometry" />
+          </mxCell>
+        </UserObject>
         <UserObject label="" tooltip="SSH (Secure Shell) Keys" id="EyldbqkST-IWhBG-3otC-3">
           <mxCell style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#1A1A1A;shape=mxgraph.azure.access_control;rotation=0;" parent="1" vertex="1">
             <mxGeometry x="188" y="425.5" width="40" height="40" as="geometry" />
@@ -224,11 +226,14 @@
             <mxGeometry x="168" y="684.5875140368258" width="50.368" height="34.816" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="0hqDCtrjmVxyAoHmFhwl-1" value="&lt;ul style=&quot;font-size: 13px;&quot;&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/cloudfront/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;CloudFront&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/waf/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Web Application Firewall&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/s3/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Simple Storage Service&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/ecr/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Elastic Container Registry&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/fargate/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Fargate&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/sns/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Simple Notification Service&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/step-functions/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Step Functions&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/vpc/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Virtual Private Cloud&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="1146" y="593" width="220" height="136" as="geometry" />
+        <mxCell id="0hqDCtrjmVxyAoHmFhwl-1" value="&lt;ul style=&quot;font-size: 13px; line-height: 160%;&quot;&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/cloudfront/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;CloudFront&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/waf/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Web Application Firewall&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/s3/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Simple Storage Service&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/ecr/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Elastic Container Registry&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/fargate/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Fargate&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/sns/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Simple Notification Service&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/step-functions/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Step Functions&lt;/a&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 13px;&quot;&gt;&lt;a href=&quot;https://aws.amazon.com/vpc/pricing/&quot; style=&quot;font-size: 13px;&quot;&gt;Virtual Private Cloud&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1145" y="541" width="214" height="188" as="geometry" />
         </mxCell>
         <mxCell id="0hqDCtrjmVxyAoHmFhwl-2" value="Amazon (Pricing Links)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;fontSize=13;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="1146" y="560" width="202" height="30" as="geometry" />
+          <mxGeometry x="1145" y="522" width="202" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="0hqDCtrjmVxyAoHmFhwl-3" value="Most of the diagram&#39;s objects have tooltips, and sometimes links; hover." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=0;fontStyle=1;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="175" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
