@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" modified="2024-11-25T19:58:33.989Z" etag="uBe7V7E3l_idIDRds6Dg" version="22.1.2" type="device">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" modified="2024-11-25T20:09:20.742Z" etag="64CBt9SR807mhWKdxgMl" version="22.1.2" type="device">
   <diagram id="3fyaTf5KyxF5UBYYpUpR" name="schema">
     <mxGraphModel dx="1356" dy="944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -117,9 +117,11 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MzJ6kpmqYAqKO0MEyCDg-1" value="latest daily&amp;nbsp;&lt;div style=&quot;font-size: 13px;&quot;&gt;measures&lt;/div&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#333333;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=right;html=1;fontSize=13;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecs;rotation=0;labelPosition=left;spacingLeft=-10;spacingRight=0;spacingTop=-20;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;" parent="1" vertex="1">
-          <mxGeometry x="872" y="437.5" width="35" height="35" as="geometry" />
-        </mxCell>
+        <UserObject label="latest daily&amp;nbsp;&lt;div style=&quot;font-size: 13px;&quot;&gt;measures&lt;/div&gt;" tooltip="An ECS (Elastic Container Service) &lt;b&gt;Fargate&lt;/b&gt; tasks that &lt;b&gt;(a)&lt;/b&gt; retrieves the latest measures, &lt;b&gt;(b)&lt;/b&gt; structures the data, and &lt;b&gt;(c)&lt;/b&gt; delivers the data to an Amazon S3 (Simple Storage Service) bucket." id="MzJ6kpmqYAqKO0MEyCDg-1">
+          <mxCell style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#333333;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=right;html=1;fontSize=13;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecs;rotation=0;labelPosition=left;spacingLeft=-10;spacingRight=0;spacingTop=-20;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;" parent="1" vertex="1">
+            <mxGeometry x="872" y="437.5" width="35" height="35" as="geometry" />
+          </mxCell>
+        </UserObject>
         <mxCell id="FmHYnlMzlGDva0tA0qFk-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=0.35;" parent="1" source="XIRghMO-il6a78rcAX_Q-1" target="eS7tUnVbYrJb8bfeCUeB-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -128,9 +130,11 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="XIRghMO-il6a78rcAX_Q-1" value="quantiles" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#333333;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=left;html=1;fontSize=13;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecs;rotation=0;labelPosition=right;spacingBottom=0;spacingLeft=-15;spacingTop=-5;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;" parent="1" vertex="1">
-          <mxGeometry x="961" y="559.5" width="35" height="35" as="geometry" />
-        </mxCell>
+        <UserObject label="quantiles" tooltip="An ECS (Elastic Container Service) &lt;b&gt;Fargate&lt;/b&gt; tasks that calculates the quantiles of each day&#39;s, and each sensor&#39;s, distinct measures." id="XIRghMO-il6a78rcAX_Q-1">
+          <mxCell style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#333333;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=left;html=1;fontSize=13;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ecs;rotation=0;labelPosition=right;spacingBottom=0;spacingLeft=-15;spacingTop=-5;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;" parent="1" vertex="1">
+            <mxGeometry x="961" y="559.5" width="35" height="35" as="geometry" />
+          </mxCell>
+        </UserObject>
         <mxCell id="h-MAE44J23tyEX1725AW-1" value="notify:&amp;nbsp;&lt;div style=&quot;font-size: 13px;&quot;&gt;success&lt;/div&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=13;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sns;rotation=0;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;" parent="1" vertex="1">
           <mxGeometry x="922" y="687" width="35" height="35" as="geometry" />
         </mxCell>
@@ -216,7 +220,7 @@
             <mxGeometry x="200" y="800.5875140368258" width="50.368" height="34.816" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="0hqDCtrjmVxyAoHmFhwl-1" value="&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/cloudfront/pricing/&quot;&gt;CloudFront&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/waf/pricing/&quot;&gt;Web Application Firewall&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/s3/pricing/&quot;&gt;Simple Storage Service&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;" vertex="1" parent="1">
+        <mxCell id="0hqDCtrjmVxyAoHmFhwl-1" value="&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/cloudfront/pricing/&quot;&gt;CloudFront&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/waf/pricing/&quot;&gt;Web Application Firewall&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/s3/pricing/&quot;&gt;Simple Storage Service&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/ecr/pricing/&quot;&gt;Elastic Container Registry&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/fargate/pricing/&quot;&gt;Fargate&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Asap;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DAsap;" vertex="1" parent="1">
           <mxGeometry x="110" y="941" width="240" height="80" as="geometry" />
         </mxCell>
       </root>
