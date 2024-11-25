@@ -94,7 +94,6 @@
 
     <div class="grid-item"></div>
     <div class="grid-item">
-        <h2>Project Hub</h2>
 
         The GitHub Organization <a href="https://github.com/excomputing"><i>excomputing</i></a> hosts all the repositories of this project.  In line with the <b>agnostic solutions</b> request, all computations are via containers.  Container
         image registration is automatic, it occurs during pushes to GitHub, i.e., it is part of this project's continuous
@@ -106,7 +105,7 @@
         <br><br>
 
         The repositories have an execution order, which informs the design of end-to-end automated solutions via <b>state
-        machines</b>.  For example, the acquisition, or re-acquisition, baseline/historical data is via the <a
+        machines</b>.  For example, the acquisition, or re-acquisition, of baseline/historical data is via the <a
             href="https://github.com/excomputing/pollutants" target="_blank">pollutants repository</a>.
 
         <pre class="mermaid">
@@ -137,10 +136,17 @@
 
     <div class="grid-item"></div>
     <div class="grid-item">
-        <h2>State Machines</h2>
-        Within Amazon Web Services (AWS), a container instance of a repository is run via a <b>task state</b> of an
-        AWS Step Functions <b>state machine</b>.  AWS Step Functions is a <i>``serverless orchestration service''</i>, via
-        which end-to-end automated solutions, on-demand machine learning model training, etc., can be deployed.
+        <h3>Daily</h3>
+        <figure>
+            <img  style="width:65%" src="assets/images/step-functions.png" alt="Step Functions" />
+            <figcaption>Deploying an end-to-end solution via <a
+                href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html" target="_blank">a step
+                functions state machine</a>, an orchestration service. The underlying infrastructure code outlines (a)
+                executions via Amazon's Elastic Container Service [Fargate], (b) virtual private cloud settings per case, alongside
+                security group and subnet settings, (c) notification settings, (d) time-boxing/auto-termination, (e) and
+                much more.
+            </figcaption>
+        </figure>
     </div>
     <div class="grid-item"></div>
 
@@ -176,21 +182,7 @@
     <div class="grid-item"></div>
 
 
-    <div class="grid-item"></div>
-    <div class="grid-item">
-        <h3>Daily</h3>
-        <figure>
-            <img  style="width:65%" src="assets/images/step-functions.png" alt="Step Functions" />
-            <figcaption>Deploying an end-to-end solution via <a
-                    href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html" target="_blank">a step
-                functions state machine</a>, an orchestration service. The underlying infrastructure code outlines (a)
-                executions via Amazon's Elastic Container Service [Fargate], (b) virtual private cloud settings per case, alongside
-                security group and subnet settings, (c) notification settings, (d) time-boxing/auto-termination, (e) and
-                much more.
-            </figcaption>
-        </figure>
-    </div>
-    <div class="grid-item"></div>
+
 
 
     <div class="grid-item"></div>
