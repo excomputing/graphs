@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-04-07T22:13:26.450Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="Pacw3Sy0oxZrnWvvsyM1" version="22.1.2" type="device">
+<mxfile host="Electron" modified="2024-11-24T18:40:10.496Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="71Q5w5QU3c7MGQ96AFay" version="22.1.2" type="device">
   <diagram name="beforehand" id="6Unp4fr6vBo7ofHIK0j_">
-    <mxGraphModel dx="1098" dy="699" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1017" dy="708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="1" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -88,7 +88,7 @@
           </mxCell>
         </UserObject>
         <UserObject label="" tooltip="Amazon S3 (Simple Storage Service)" link="https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#requesting-the-access-token" linkTarget="_blank" id="pZbm-gCKyQxp76hLyjaD-2">
-          <mxCell style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#282828;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;rotation=0;" vertex="1" parent="1">
+          <mxCell style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#282828;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.bucket;rotation=0;" parent="1" vertex="1">
             <mxGeometry x="748.1800000000001" y="398" width="30" height="31.2" as="geometry" />
           </mxCell>
         </UserObject>
