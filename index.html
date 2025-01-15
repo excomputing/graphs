@@ -44,7 +44,7 @@
             Automatically <b>(a)</b> read data from one or more sources around the world, <b>(b)</b> inspect the data,
             address anomalies, and structure the data, <b>(c)</b> deliver structured data to defined
             points, <b>(d)</b> run sets of algorithms, e.g., business intelligence algorithms, on schedule,
-            and <b>(e)</b> deliver the run results to defined points.
+            and <b>(e)</b> deliver a run's results to defined points.
         </blockquote>
 
         <b>And are</b>
@@ -61,14 +61,13 @@
         telemetric devices across Edinburgh.  The illustration is via two solutions
 
         <ol>
-            <li>A <a href="https://github.com/excomputing/pollutants" target="_blank">one-off solution</a> that sets up a data depository within Amazon, and subsequently delivers historical
-                Scottish Air Quality nitrogen dioxide data to the depository; after cleaning and structuring. </li>
+            <li>A <a href="https://github.com/excomputing/pollutants" target="_blank">one-off solution</a> that sets up a data depository within Amazon, and subsequently delivers historical Scottish Air Quality nitrogen dioxide data to the depository; after cleaning and structuring. </li>
             <li>A solution designed to operate daily.  Each day it automatically reads and structures the latest nitrogen
                 readings, conducts quantiles and extrema calculations, and delivers the calculations to a point
                 where a graph's data interface automatically reads it. daily &rarr; distributions &rarr; graph</li>
         </ol>
 
-        Instead of a graph, it could be a mobile app, an alert system, any data interface.
+        Instead of a graph, it could be a mobile app, an alert system, etc.
 
     </div>
     <div class="grid-item"></div>
@@ -76,9 +75,8 @@
 
     <div class="grid-item"></div>
     <div class="grid-item">
-        <h2>Set Up</h2>
-        For more details hover over the icons; a few icons have links to more details.  Assets, e.g.,
-        container images, are delivered to Amazon Web Services (AWS) via GitHub.
+        <h2>Concept</h2>
+        The illustration below outlines the proof of concept architecture; enlarge via the illustration's <i>fit</i> or <i>zoom</i> buttons, at the bottom of the illustration.  <b>For more details hover over the icons; a few icons have links to more details.</b>  Assets, e.g., container images, are delivered to Amazon Web Services (AWS) via GitHub.<br>
         <iframe style="overflow:hidden; width:100%; height:715px; border:none; margin-left:35px"
                 src="assets/images/sketches.html"></iframe>
     </div>
@@ -88,40 +86,14 @@
     <div class="grid-item"></div>
     <div class="grid-item">
 
-        The GitHub Organization <a href="https://github.com/excomputing"><i>excomputing</i></a> hosts all the repositories of this project.  In line with the <b>agnostic solutions</b> request, all computations are via containers.  Container
-        image registration is automatic, it occurs during pushes to GitHub, i.e., it is part of this project's continuous
-        integration, delivery, & deployment set-up; the registries are <a
-            href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html" target="_blank">Amazon Elastic Container
-        Registry</a> &
-        <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#about-the-container-registry" target="_blank">GitHub Container Registry</a>.
+        The GitHub Organization <a href="https://github.com/excomputing"><i>excomputing</i></a> hosts all the repositories of this project.  In line with the <b>agnostic solutions</b> request, all computations are via containers.  Container image registration is automatic, it occurs during pushes to GitHub, i.e., it is part of this project's continuous integration, delivery, & deployment set-up; the registries are
 
-        <br><br>
+        <ul>
+            <li><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html" target="_blank">Amazon Elastic Container Registry</a></li>
+            <li><a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#about-the-container-registry" target="_blank">GitHub Container Registry</a>.</li>
+        </ul>
 
-        The repositories have an execution order, which informs the design of end-to-end automated solutions via <b>state
-        machines</b>.  For example, the acquisition, or re-acquisition, of baseline/historical data is via the <a
-            href="https://github.com/excomputing/pollutants" target="_blank">pollutants repository</a>.
-
-        <pre class="mermaid">
-        flowchart LR
-        id8([start]) --> id9(<span title="historical nitrogen readings">pollutants</span>)
-        id9 --> id10([END])
-
-        classDef default fill:#333333,stroke:#333333,stroke-width:0px,color:#ffffff,font-size:10pt;
-        </pre>
-
-        <br>
-
-        The acquisition of the latest daily measures is via the <a>daily repository</a>, whilst the calculation of
-        quantiles & extrema is via the <a>distributions repository</a>.
-
-        <pre class="mermaid">
-        flowchart LR
-        id0([start]) --> id1(<span title="get yesterday's nitrogen readings">daily</span>)
-        id1 --> id2(<span title="recalculate the daily quantiles across time">distributions</span>)
-        id2 --> id3([END])
-
-        classDef default fill:#333333,stroke:#333333,stroke-width:0px,color:#ffffff,font-size:10pt;
-        </pre>
+        A GitHub Actions event <b>(a)</b> builds an image of a repository, and <b>(b)</b> delivers the image to either or both registries; these steps automatically occur during on-master-push to GitHub.
 
     </div>
     <div class="grid-item"></div>
@@ -129,18 +101,23 @@
 
     <div class="grid-item"></div>
     <div class="grid-item">
-        <h3>Daily</h3>
-        The Step Function state machine illustrated within the diagram above.
+        <h2>The State Machines</h2>
+        The repositories have an execution order, which informs the design of end-to-end automated solutions via Amazon Step Functions <a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html" target="_blank">state machines</a>.
+    </div>
+    <div class="grid-item"></div>
+
+
+    <div class="grid-item"></div>
+    <div class="grid-item">
+        <h3>Daily Tasks</h3>
+        This is an outline of the above illustration's Amazon Step Function state machine.  Its steps illustrate <b>(a)</b> the acquisition of the latest daily measures via a container image of the <a href="https://github.com/excomputing/daily" target="_blank">daily repository</a>, and (b) the calculation of quantiles & extrema via a container image of the <a href="https://github.com/excomputing/distributions" target="_blank">distributions repository</a>.
         <figure>
-            <img  style="width:45%" src="assets/images/step-functions.png" alt="Step Functions" />
-            <figcaption>Deploying an end-to-end solution via <a
-                href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html" target="_blank">a step
-                functions state machine</a>, an orchestration service. The underlying infrastructure code outlines (a)
-                executions via Amazon's Elastic Container Service [Fargate], (b) virtual private cloud settings per case, alongside
-                security group and subnet settings, (c) notification settings, (d) time-boxing/auto-termination, (e) and
-                much more.
-            </figcaption>
+            <img  style="width:65%" src="assets/images/step-functions.png" alt="Step Functions" />
         </figure>
+        Deploying an end-to-end solution via <a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html" target="_blank">a step functions state machine</a>, an orchestration service. The underlying infrastructure code outlines (a)
+        executions via Amazon's Elastic Container Service [Fargate], (b) virtual private cloud settings per case, alongside
+        security group and subnet settings, (c) notification settings, (d) time-boxing/auto-termination, (e) and
+        much more.
     </div>
     <div class="grid-item"></div>
 
@@ -148,9 +125,8 @@
     <div class="grid-item"></div>
     <div class="grid-item">
         <h3>Historical</h3>
-        The task state <b>pollutants</b> runs a container that reads historical pollutants data from Scottish
-        Air Quality's data hub.
-        <pre class="mermaid">
+        The acquisition, or re-acquisition, of baseline/historical data is via a container image of the <a href="https://github.com/excomputing/data" target="_blank">data repository</a>.  The container reads historical nitrogen dioxide data from Scottish Air Quality's <a href="https://www.scottishairquality.scot/data" target="_blank">data hub</a>.
+        <pre class="mermaid" style="margin-left: 95px;">
             stateDiagram-v2
             id1: pollutants
             id2: Notify Success
@@ -163,20 +139,13 @@
         </pre>
         In brief:
         <ul>
-            <li>A GitHub Actions event <b>(a)</b> builds an image of the pollutants repository, and <b>(b)</b> delivers the
-                image to an Amazon Elastic Container Registry repository.  This occurs automatically on-push to GitHub.</li>
-            <li>Next, at runtime the state machine pulls the image from the registry and creates a runtime container.  The container
+            <li>At runtime the state machine pulls the image from the registry and creates a runtime container.  The container
                 reads the raw data, structures it, and delivers the structured data to a specified Amazon S3 (Simple Storage Service) bucket.</li>
             <li>Depending on events, a success or failure notification is raised.  Afterwards, all activated services are terminated.</li>
         </ul>
-        The <b>pollutants</b> container will erase everything in place, then reset cloud resources and re-acquire
-        historical data.
 
     </div>
     <div class="grid-item"></div>
-
-
-
 
 
     <div class="grid-item"></div>
