@@ -76,7 +76,7 @@
     <div class="grid-item"></div>
     <div class="grid-item">
         <h2>Concept</h2>
-        The illustration below outlines the proof of concept architecture; enlarge via the illustration's <i>fit</i> or <i>zoom</i> buttons, at the bottom of the illustration.  <b>For more details hover over the icons; a few icons have links to more details.</b>  Assets, e.g., container images, are delivered to Amazon Web Services (AWS) via GitHub.<br>
+        The illustration below outlines the proof of concept architecture; <b>enlarge the illustration via the </b><i>fit</i> <b>or</b> <i>zoom</i><b> buttons, at the bottom of the illustration</b>.  <b>For more details about an item/icon, hover over the item/icon; a few icons have links to more details.</b>  Assets, e.g., container images, are delivered to Amazon Web Services (AWS) via GitHub.<br>
         <iframe style="overflow:hidden; width:100%; height:715px; border:none; margin-left:35px"
                 src="assets/images/sketches.html"></iframe>
     </div>
@@ -126,17 +126,9 @@
     <div class="grid-item">
         <h3>Historical</h3>
         The acquisition, or re-acquisition, of baseline/historical data is via a container image of the <a href="https://github.com/excomputing/data" target="_blank">data repository</a>.  The container reads historical nitrogen dioxide data from Scottish Air Quality's <a href="https://www.scottishairquality.scot/data" target="_blank">data hub</a>.
-        <pre class="mermaid" style="margin-left: 95px;">
-            stateDiagram-v2
-            id1: pollutants
-            id2: Notify Success
-            id3: Notify Failure
-            [*] --> id1
-            id1 --> id2
-            id1 --> id3: catch
-            id2 --> [*]
-            id3 --> [*]
-        </pre>
+        <figure>
+            <img  style="width:65%" src="assets/images/step-functions-historical.png" alt="Step Functions" />
+        </figure>
         In brief:
         <ul>
             <li>At runtime the state machine pulls the image from the registry and creates a runtime container.  The container
