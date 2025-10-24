@@ -101,7 +101,7 @@ function generateChart(fileNameKey) {
         Highcharts.stockChart('container0003', {
 
             rangeSelector: {
-                selected: 1,
+                selected: 0,
                 verticalAlign: 'top',
                 floating: false,
                 inputPosition: {
@@ -141,18 +141,18 @@ function generateChart(fileNameKey) {
 
             legend: {
                 enabled: true,
-                width: 600,
-                x: 35
+                width: 500,
+                x: 35,
                 // align: 'middle',
                 // layout: 'vertical',
                 // verticalAlign: 'bottom',
-                // y: 10,
+                y: 10,
                 // x: 35
             },
 
             caption: {
                 // verticalAlign: "top",
-                text: '<p>Each candlestick illustrates the spread of nitrogen measures ' +
+                text: '<p><br><br>Each candlestick illustrates the spread of nitrogen measures ' +
                     'across 24 hours.</p>'
             },
 
