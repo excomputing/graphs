@@ -38,7 +38,7 @@ dropdown.on('change', function (e) {
 function generateChart(fileNameKey) {
 
     // Relative to Amazon S3 (Simple Storage Service) Set Up
-    $.getJSON('../pollutants/quantiles/pollutant_8_station_' + fileNameKey + '.json', function (source) {
+    $.getJSON('../warehouse/quantiles/pollutant_8_station_' + fileNameKey + '.json', function (source) {
 
         // https://api.highcharts.com/highstock/plotOptions.series.dataLabels
         // https://api.highcharts.com/class-reference/Highcharts.Point#.name
@@ -142,7 +142,7 @@ function generateChart(fileNameKey) {
             legend: {
                 enabled: true,
                 width: 600,
-                x: 100
+                x: 35
                 // align: 'middle',
                 // layout: 'vertical',
                 // verticalAlign: 'bottom',
