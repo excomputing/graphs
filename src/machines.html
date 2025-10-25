@@ -128,11 +128,11 @@
                     <td><br>
                       <h3>Daily Tasks</h3>
                       <p>
-                        This is an outline of the above illustration's Amazon Step Function state machine.  Its steps illustrate <b>(a)</b> the acquisition of the latest daily measures via a container image of the <a href="https://github.com/excomputing/daily" target="_blank">daily repository</a>, and (b) the calculation of quantiles & extrema via a container image of the <a href="https://github.com/excomputing/distributions" target="_blank">distributions repository</a></p>.
+                        This is an outline of the <a href="../assets/img/sketches.html" class="btn btn-sm btn-outline-primary" onclick="window.open('../assets/img/sketches.html', 'newwindow', 'width=1200,height=750'); return false;">illustration's</a> Amazon Step Function state machine.  Its steps illustrate <b>(a)</b> the acquisition of the latest daily measures via a container image of the <a href="https://github.com/excomputing/daily" target="_blank">daily repository</a>, and (b) the calculation of quantiles & extrema via a container image of the <a href="https://github.com/excomputing/distributions" target="_blank">distributions repository</a></p>.
                       <figure>
-                        <img style="width:65%" src="../assets/img/step-functions.png" alt="Step Functions" />
+                        <div style="margin-left: 65px;"><img src="/assets/img/graph.png" width="240" height="288.125"></div>
                       </figure>
-                      <p><br>Deploying an end-to-end solution via <a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html" target="_blank">a step functions state machine</a>, an orchestration service. The underlying infrastructure code outlines (a)
+                      <p style="color: #656565"><br><b>Figure 1:</b> Deploying an end-to-end solution via <a href="https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html" target="_blank">a step functions state machine</a>, an orchestration service. The underlying infrastructure code outlines (a)
                       executions via Amazon's Elastic Container Service [Fargate], (b) virtual private cloud settings per case, alongside
                       security group and subnet settings, (c) notification settings, (d) time-boxing/auto-termination, (e) and
                       much more.</p>
