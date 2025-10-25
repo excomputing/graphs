@@ -38,7 +38,7 @@ dropdown.on('change', function (e) {
 function generateChart(fileNameKey) {
 
     // Relative to Amazon S3 (Simple Storage Service) Set Up
-    $.getJSON('../pollutants/quantiles/pollutant_8_station_' + fileNameKey + '.json', function (source) {
+    $.getJSON('../warehouse/quantiles/pollutant_8_station_' + fileNameKey + '.json', function (source) {
 
         // https://api.highcharts.com/highstock/plotOptions.series.dataLabels
         // https://api.highcharts.com/class-reference/Highcharts.Point#.name
@@ -101,7 +101,7 @@ function generateChart(fileNameKey) {
         Highcharts.stockChart('container0003', {
 
             rangeSelector: {
-                selected: 1,
+                selected: 0,
                 verticalAlign: 'top',
                 floating: false,
                 inputPosition: {
@@ -141,18 +141,18 @@ function generateChart(fileNameKey) {
 
             legend: {
                 enabled: true,
-                width: 600,
-                x: 100
+                width: 500,
+                x: 35,
                 // align: 'middle',
                 // layout: 'vertical',
                 // verticalAlign: 'bottom',
-                // y: 10,
+                y: 10,
                 // x: 35
             },
 
             caption: {
                 // verticalAlign: "top",
-                text: '<p>Each candlestick illustrates the spread of nitrogen measures ' +
+                text: '<p><br><br>Each candlestick illustrates the spread of nitrogen measures ' +
                     'across 24 hours.</p>'
             },
 
