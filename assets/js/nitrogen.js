@@ -153,7 +153,8 @@ function generateChart(fileNameKey) {
             caption: {
                 // verticalAlign: "top",
                 text: '<p><br><br>Each candlestick illustrates the spread of nitrogen measures ' +
-                    'across 24 hours.</p>'
+                    'across 24 hours.  <br><br><b>IMPORTANT:</b> The air quality data service, upon which this illustration depends, has been ' +
+                    'suspended; 12 November 2025 onwards. Therefore, the underlying orchestration is in a disabled state.</p>'
             },
 
             exporting: {
